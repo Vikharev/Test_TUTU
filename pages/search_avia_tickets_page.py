@@ -13,11 +13,11 @@ class SearchAviaTickets:
 
     def choice_date_from(self):
         with allure.step('Select the departure date'):
-            browser.element("//button[contains(text(), 'Сегодня')]").click()
+            browser.element("//*[contains(text(), 'Сегодня')]").click()
 
     def choice_date_to(self):
         with allure.step('Select the date of the return ticket'):
-            browser.element("//button[contains(text(), 'Послезавтра')]").click()
+            browser.element("//*[contains(text(), 'Послезавтра')]").click()
 
     def submit_selection(self):
         with allure.step('Submit selection'):
