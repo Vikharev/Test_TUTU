@@ -13,11 +13,13 @@ class SearchAviaTickets:
 
     def type_date_from(self, date_from):
         with allure.step('Select the departure date'):
-            browser.element('[data-ti="trip-dates"]').type(date_from).press_enter()
+            browser.element('[data-ti="trip-dates"]').type(date_from).click()
+            browser.element(f'[aria-label="{date_from}"]').click()
 
     def type_date_to(self, date_to):
         with allure.step('Select the date of the return ticket'):
-            browser.element('[data-ti="trip-second-date"]').type(date_to).press_enter()
+            browser.element('[data-ti="trip-dates"]').type(date_to).click()
+            browser.element(f'[aria-label="{date_to}"]').click()
 
     def submit_selection(self):
         with allure.step('Submit selection'):

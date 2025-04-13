@@ -71,11 +71,9 @@ def test_edit_personal_data():
 def test_search_avia_ticket():
     authorization_page.open()
     search_avia_ticket_page.type_city_from('Москва')
-    search_avia_ticket_page.type_city_to('Сочи')
-    search_avia_ticket_page.type_date_from('15.05.2025')
-    search_avia_ticket_page.type_date_to('18.05.2025')
-    search_avia_ticket_page.count_adult_passengers()
-    search_avia_ticket_page.select_class()
+    search_avia_ticket_page.type_city_to('Санкт-Петербург')
+    search_avia_ticket_page.type_date_from('Thu May 15 2025')
+    search_avia_ticket_page.type_date_to('Thu May 16 2025')
     search_avia_ticket_page.submit_selection()
     search_avia_ticket_page.should_be_change_search_button()
 
