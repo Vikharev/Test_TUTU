@@ -6,7 +6,7 @@ class QueryPage:
     def information_table(self):
         with allure.step('Open information page'):
             browser.element('[href="https://www.tutu.ru/2read/"]').click()
-        return self
+            browser.switch_to_tab(1)
 
     def enter_search_query(self):
         with allure.step('Enter search query'):

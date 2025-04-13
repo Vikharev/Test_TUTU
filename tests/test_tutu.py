@@ -20,7 +20,7 @@ def test_valid_authorization():
     authorization_page.fill_password()
     authorization_page.submit_authorization()
     authorization_page.skip_submit_telephone()
-    authorization_page.should_have_logout_form()
+    authorization_page.should_have_person_circle()
 
 
 @allure.tag('Web')

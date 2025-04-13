@@ -40,9 +40,9 @@ class AuthorizationUserPage:
             browser.element('[data-ti="skip-button"]').click()
 
 
-    def should_have_logout_form(self):
+    def should_have_person_circle(self):
         with allure.step('Check the successful authorization'):
-            browser.element('[data-ti="logout_link"]').click()
+            browser.element('.oim-person-circle_outline').should(be.visible)
 
     def should_have_text(self, text):
         with allure.step('Check that the authorization failed'):

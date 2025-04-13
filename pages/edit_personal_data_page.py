@@ -4,9 +4,8 @@ import allure
 
 class EditPersonalData:
     def open_profile(self):
-        with allure.step('Open profile'):
-            browser.element('[data-ti="user_name_link"]').click()
-            browser.element('#editDataLink').click()
+        with allure.step('Open profile page'):
+            browser.open('https://www.tutu.ru/user/profile/')
 
     def type_first_name(self, first_name):
         with allure.step('Fill First name'):
