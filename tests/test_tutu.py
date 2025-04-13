@@ -70,10 +70,10 @@ def test_edit_personal_data():
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
 def test_search_avia_ticket():
     authorization_page.open()
-    search_avia_ticket_page.type_city_from('Москва')
-    search_avia_ticket_page.type_city_to('Санкт-Петербург')
-    search_avia_ticket_page.type_date_from('Thu May 15 2025')
-    search_avia_ticket_page.type_date_to('Thu May 16 2025')
+    search_avia_ticket_page.choice_city_from()
+    search_avia_ticket_page.choice_city_to()
+    search_avia_ticket_page.choice_date_from()
+    search_avia_ticket_page.choice_date_to()
     search_avia_ticket_page.submit_selection()
     search_avia_ticket_page.should_be_change_search_button()
 

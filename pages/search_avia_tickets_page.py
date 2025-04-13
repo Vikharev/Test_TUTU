@@ -3,23 +3,21 @@ import allure
 
 
 class SearchAviaTickets:
-    def type_city_from(self, city_from):
+    def choice_city_from(self):
         with allure.step('Select the city from'):
-            browser.element("//*[.='Откуда']/../input").type(city_from).press_enter()
+            browser.element('[data-ti="fromHint"]').click()
 
-    def type_city_to(self, city_to):
+    def choice_city_to(self):
         with allure.step('Select the city to'):
-            browser.element("//*[.='Куда']/../input").type(city_to).press_enter()
+            browser.element('[data-ti="toHint"]').click()
 
-    def type_date_from(self, date_from):
+    def choice_date_from(self):
         with allure.step('Select the departure date'):
-            browser.element('[data-ti="trip-dates"]').type(date_from).click()
-            browser.element(f'[aria-label="{date_from}"]').click()
+            browser.element('button[text()="Сегодня"]').click()
 
-    def type_date_to(self, date_to):
+    def choice_date_to(self):
         with allure.step('Select the date of the return ticket'):
-            browser.element('[data-ti="trip-dates"]').type(date_to).click()
-            browser.element(f'[aria-label="{date_to}"]').click()
+            browser.element('button[text()="Послезавтра"]').click()
 
     def submit_selection(self):
         with allure.step('Submit selection'):
