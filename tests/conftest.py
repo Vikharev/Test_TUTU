@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 
 from utils import attach
 
-BASE_URL = 'https://demoqa.com'
+BASE_URL = 'https://tutu.ru'
 DEFAULT_BROWSER_VERSION = '127.0'
 
 
