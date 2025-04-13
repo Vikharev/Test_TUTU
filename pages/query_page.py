@@ -5,11 +5,11 @@ import allure
 class QueryPage:
     def information_table(self):
         with allure.step('Open information page'):
-            browser.element('[href="/2read/poezda/main/"]').click()
+            browser.element('[href="https://www.tutu.ru/2read/"]').click()
 
     def enter_search_query(self):
         with allure.step('Enter search query'):
-            browser.element('#search').click().type('как получить визу').press_enter()
+            browser.element('#search').click().type('электронная регистрация').press_enter()
 
     def check_search_query(self):
         with allure.step('Check search query'):

@@ -5,11 +5,11 @@ import allure
 class SearchAviaTickets:
     def type_city_from(self, city_from):
         with allure.step('Select the city from'):
-            browser.element('[name="city_from"]').type(city_from).press_enter()
+            browser.element.by.text('Откуда').type(city_from).press_enter()
 
     def type_city_to(self, city_to):
         with allure.step('Select the city to'):
-            browser.element('[name="city_to"]').type(city_to).press_enter()
+            browser.element.by.text('Куда').type(city_to).press_enter()
 
     def type_date_from(self, date_from):
         with allure.step('Select the departure date'):

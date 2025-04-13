@@ -10,7 +10,11 @@ class AuthorizationUserPage:
 
     def open_authorization_page(self):
         with allure.step('Open authorization form'):
-            browser.element('[data-ti="login_link"]').click()
+            browser.element('[data-ti="label-value-label"]').click()
+
+    def select_password_auth(self):
+        with allure.step('Select authorization with password'):
+            browser.element('[data-ti="login-by-password-trigger"]').click()
 
     def fill_email(self):
         with allure.step('Fill Email'):
@@ -30,6 +34,11 @@ class AuthorizationUserPage:
     def submit_authorization(self):
         with allure.step('Submit authorization'):
             browser.element('[data-ti="submit-trigger"]').click()
+
+    def skip_submit_telephone(self):
+        with allure.step('Select authorization with password'):
+            browser.element('[data-ti="skip-button"]').click()
+
 
     def should_have_logout_form(self):
         with allure.step('Check the successful authorization'):
