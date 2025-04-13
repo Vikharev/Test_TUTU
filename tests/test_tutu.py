@@ -12,7 +12,6 @@ from pages.query_page import query_page
 @allure.feature('Authorization with valid login and password')
 @allure.story('Authorization')
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
-@pytest.mark.skip(reason="отладка")
 def test_valid_authorization():
     authorization_page.open()
     authorization_page.open_authorization_page()
@@ -29,7 +28,6 @@ def test_valid_authorization():
 @allure.feature('Authorization with wrong password')
 @allure.story('Authorization')
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
-@pytest.mark.skip(reason="отладка")
 def test_authorization_with_wrong_password():
     authorization_page.open()
     authorization_page.open_authorization_page()
@@ -45,7 +43,6 @@ def test_authorization_with_wrong_password():
 @allure.feature('Edit profile')
 @allure.story('Profile')
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
-@pytest.mark.skip(reason="отладка")
 def test_edit_personal_data():
     authorization_page.open()
     authorization_page.open_authorization_page()
@@ -85,7 +82,6 @@ def test_search_avia_ticket():
 @allure.feature('Search query')
 @allure.story('Page query')
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
-@pytest.mark.skip(reason="отладка")
 def test_search_query():
     authorization_page.open()
     query_page.information_table()
