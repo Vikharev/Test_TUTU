@@ -52,7 +52,6 @@ def test_edit_personal_data():
     authorization_page.fill_email()
     authorization_page.fill_password()
     authorization_page.submit_authorization()
-    authorization_page.skip_submit_telephone()
     edit_personal_data_page.open_profile()
     edit_personal_data_page.edit_mode_on()
     edit_personal_data_page.type_first_name('Иван')
