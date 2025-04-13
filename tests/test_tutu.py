@@ -28,7 +28,7 @@ def test_valid_authorization():
 @allure.feature('Authorization with wrong password')
 @allure.story('Authorization')
 @allure.link('https://www.tutu.ru', name='Tutu.ru')
-@pytest.skip
+@pytest.mark.skip(reason="отладка")
 def test_authorization_with_wrong_password():
     authorization_page.open()
     authorization_page.open_authorization_page()
