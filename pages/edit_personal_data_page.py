@@ -7,6 +7,11 @@ class EditPersonalData:
         with allure.step('Open profile page'):
             browser.open('https://www.tutu.ru/user/profile/')
 
+    def edit_mode_on(self):
+        with allure.step('Open profile page'):
+            browser.element('#editDataLink').click()
+
+
     def type_first_name(self, first_name):
         with allure.step('Fill First name'):
             browser.element('#editDForm_first_name').clear().type(first_name)
@@ -38,10 +43,6 @@ class EditPersonalData:
     def check_successful_edit(self):
         with allure.step('Сheck for successful saving of changes'):
             browser.element('#editDataMessage').should(have.text('Личные данные сохранены'))
-
-    def open_main_page(self):
-        with allure.step('Back to the main page'):
-            browser.element('.jUzldXN___logoLink').click()
 
 
 edit_personal_data_page = EditPersonalData()
