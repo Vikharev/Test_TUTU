@@ -9,7 +9,7 @@ class SearchAviaTickets:
 
     def type_city_to(self, city_to):
         with allure.step('Select the city to'):
-            browser.element(by.text('Куда')).type(city_to).press_enter()
+            browser.element("//*[.='Куда']/../input").type(city_to).press_enter()
 
     def type_date_from(self, date_from):
         with allure.step('Select the departure date'):
