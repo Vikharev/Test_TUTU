@@ -5,32 +5,23 @@ import allure
 class SearchAviaTickets:
     def type_city_from(self, city_from):
         with allure.step('Select the city from'):
-            browser.element.by.text('Откуда').type(city_from).press_enter()
+            browser.element('//*[text()="Откуда"]/').type(city_from).press_enter()
 
     def type_city_to(self, city_to):
         with allure.step('Select the city to'):
-            browser.element.by.text('Куда').type(city_to).press_enter()
+            browser.element('//*[text()="Куда"]/').type(city_to).press_enter()
 
     def type_date_from(self, date_from):
         with allure.step('Select the departure date'):
-            browser.element('[name="date_from"]').type(date_from).press_enter()
+            browser.element('[data-ti="trip-dates"]').type(date_from).press_enter()
 
     def type_date_to(self, date_to):
         with allure.step('Select the date of the return ticket'):
-            browser.element('[name="date_back"]').type(date_to)
-
-    def count_adult_passengers(self):
-        with allure.step('Select the number of adult passengers'):
-            browser.element('.counter_adult_wrp').element('[class="increase"]').click()
-
-    def select_class(self):
-        with allure.step('Select class'):
-            browser.element('.j-dropdown').click()
-            browser.element('[data-value="C"]').click()
+            browser.element('[data-ti="trip-second-date"]').type(date_to).press_enter()
 
     def submit_selection(self):
         with allure.step('Submit selection'):
-            browser.element('.button_wrp.j-buttons_block').click()
+            browser.element('[data-ti="submit-button"]').click()
 
     def should_be_change_search_button(self):
         with allure.step('Check search result'):

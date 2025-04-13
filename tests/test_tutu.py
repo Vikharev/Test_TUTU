@@ -15,6 +15,7 @@ from pages.query_page import query_page
 def test_valid_authorization():
     authorization_page.open()
     authorization_page.open_authorization_page()
+    authorization_page.select_password_auth()
     authorization_page.fill_email()
     authorization_page.fill_password()
     authorization_page.submit_authorization()
